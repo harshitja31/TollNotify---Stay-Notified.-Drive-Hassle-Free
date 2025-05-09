@@ -7,6 +7,13 @@ import MongoStore from "connect-mongo";
 import { connectToDatabase } from "../db/db.js";  // ✅ ADD THIS
 import { registerRoutes } from "./routes.js";
 import { setupVite, serveStatic, log } from "./vite.js";
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
 const app = express();
@@ -90,3 +97,9 @@ app.use((req, res, next) => {
     process.exit(1);
   }
 })();
+
+
+// Handle React routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+});
