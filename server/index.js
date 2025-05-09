@@ -95,6 +95,7 @@ app.use((req, res, next) => {
   }
 })();
 
+
 // Replace the existing production static serving with:
 if (app.get("env") === "production") {
   app.use(express.static(path.join(__dirname, '../client/dist')));
