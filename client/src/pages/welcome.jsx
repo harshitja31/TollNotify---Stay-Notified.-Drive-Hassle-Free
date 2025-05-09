@@ -13,7 +13,7 @@ const Welcome = () => {
         <div className="mb-8 flex flex-col items-center justify-center">
           <img src={logo} alt="TollNotify Logo" className="h-16 mb-3" />
           <h1 className="text-3xl font-bold text-[#0EA5E9]">TollNotify</h1>
-          <p className="text-sm text-white mt-1">Toll Notification Made Easy</p>
+          <p className="text-sm text-white mt-1">Stay Notified. Drive Hassle-Free</p>
         </div>
 
         {/* Welcome Text */}
