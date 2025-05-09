@@ -1,0 +1,612 @@
+[
+  {
+    "_id": "1",
+    "name": "Chandwaji Toll Plaza",
+    "latitude": 24.642934,
+    "longitude": 69.689598,
+    "roadName": "NH-101",
+    "tollFee": 89,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "2",
+    "name": "Bassi Toll Plaza",
+    "latitude": 26.765322,
+    "longitude": 70.451007,
+    "roadName": "NH-65",
+    "tollFee": 63,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "3",
+    "name": "Manoharpura Toll Plaza",
+    "latitude": 23.645927,
+    "longitude": 75.312957,
+    "roadName": "NH-130",
+    "tollFee": 94,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "4",
+    "name": "Mahua Toll Plaza",
+    "latitude": 25.179205,
+    "longitude": 69.76224,
+    "roadName": "NH-52",
+    "tollFee": 55,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "5",
+    "name": "Kherwara Toll Plaza",
+    "latitude": 25.265928,
+    "longitude": 76.317672,
+    "roadName": "NH-25",
+    "tollFee": 63,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "6",
+    "name": "Gomati Chauraha Toll Plaza",
+    "latitude": 25.681364,
+    "longitude": 75.256879,
+    "roadName": "NH-70",
+    "tollFee": 50,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "7",
+    "name": "Rajsamand Toll Plaza",
+    "latitude": 24.607665,
+    "longitude": 72.747306,
+    "roadName": "NH-40",
+    "tollFee": 82,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "8",
+    "name": "Bar Toll Plaza",
+    "latitude": 27.65963,
+    "longitude": 75.683465,
+    "roadName": "NH-41",
+    "tollFee": 78,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "9",
+    "name": "Bhilwara Toll Plaza",
+    "latitude": 28.676025,
+    "longitude": 70.105606,
+    "roadName": "NH-26",
+    "tollFee": 72,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "10",
+    "name": "Bharatpur Toll Plaza",
+    "latitude": 28.923503,
+    "longitude": 73.262705,
+    "roadName": "NH-115",
+    "tollFee": 84,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "11",
+    "name": "Raniwara Toll Plaza",
+    "latitude": 28.228329,
+    "longitude": 73.126735,
+    "roadName": "NH-126",
+    "tollFee": 66,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "12",
+    "name": "Siwana Toll Plaza",
+    "latitude": 27.485635,
+    "longitude": 70.074179,
+    "roadName": "NH-17",
+    "tollFee": 91,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "13",
+    "name": "Mandor Toll Plaza",
+    "latitude": 24.6666,
+    "longitude": 73.572714,
+    "roadName": "NH-91",
+    "tollFee": 80,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "14",
+    "name": "Gagodar Toll Plaza",
+    "latitude": 24.765634,
+    "longitude": 72.403409,
+    "roadName": "NH-65",
+    "tollFee": 57,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "15",
+    "name": "Ajmer Bypass Toll Plaza",
+    "latitude": 27.541309,
+    "longitude": 71.959961,
+    "roadName": "NH-122",
+    "tollFee": 93,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "16",
+    "name": "Kota Bypass Toll Plaza",
+    "latitude": 23.655253,
+    "longitude": 74.046052,
+    "roadName": "NH-84",
+    "tollFee": 54,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "17",
+    "name": "Tonk Road Toll Plaza",
+    "latitude": 23.780816,
+    "longitude": 69.776094,
+    "roadName": "NH-32",
+    "tollFee": 57,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "18",
+    "name": "Dudu Toll Plaza",
+    "latitude": 28.288753,
+    "longitude": 72.848939,
+    "roadName": "NH-54",
+    "tollFee": 83,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "19",
+    "name": "Gangapur Toll Plaza",
+    "latitude": 24.630981,
+    "longitude": 69.867793,
+    "roadName": "NH-88",
+    "tollFee": 62,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "20",
+    "name": "Neem Ka Thana Toll Plaza",
+    "latitude": 28.104052,
+    "longitude": 71.541995,
+    "roadName": "NH-102",
+    "tollFee": 84,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "21",
+    "name": "Kotputli Toll Plaza",
+    "latitude": 26.81364,
+    "longitude": 69.796649,
+    "roadName": "NH-110",
+    "tollFee": 92,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "22",
+    "name": "Khairthal Toll Plaza",
+    "latitude": 26.689107,
+    "longitude": 76.193731,
+    "roadName": "NH-11",
+    "tollFee": 54,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "23",
+    "name": "Jodhpur Ring Road Toll Plaza",
+    "latitude": 27.555356,
+    "longitude": 76.214336,
+    "roadName": "NH-117",
+    "tollFee": 86,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "24",
+    "name": "Jaisalmer Road Toll Plaza",
+    "latitude": 27.843139,
+    "longitude": 69.725598,
+    "roadName": "NH-61",
+    "tollFee": 89,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "25",
+    "name": "Barmer Ring Toll Plaza",
+    "latitude": 26.941176,
+    "longitude": 75.360019,
+    "roadName": "NH-53",
+    "tollFee": 93,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "26",
+    "name": "Hanumangarh Bypass Toll Plaza",
+    "latitude": 28.164146,
+    "longitude": 74.866757,
+    "roadName": "NH-138",
+    "tollFee": 55,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "27",
+    "name": "Sri Ganganagar South Toll Plaza",
+    "latitude": 27.368875,
+    "longitude": 72.004761,
+    "roadName": "NH-17",
+    "tollFee": 96,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "28",
+    "name": "Dungarpur Toll Plaza",
+    "latitude": 26.84437,
+    "longitude": 71.592653,
+    "roadName": "NH-133",
+    "tollFee": 99,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "29",
+    "name": "Chittorgarh Toll Plaza",
+    "latitude": 25.577768,
+    "longitude": 71.232789,
+    "roadName": "NH-34",
+    "tollFee": 87,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "30",
+    "name": "Udaipur West Toll Plaza",
+    "latitude": 26.382077,
+    "longitude": 75.351008,
+    "roadName": "NH-38",
+    "tollFee": 53,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "31",
+    "name": "Alwar Bypass Toll Plaza",
+    "latitude": 25.57116,
+    "longitude": 75.841417,
+    "roadName": "NH-97",
+    "tollFee": 76,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "32",
+    "name": "Beawar Toll Plaza",
+    "latitude": 28.131656,
+    "longitude": 72.655489,
+    "roadName": "NH-94",
+    "tollFee": 64,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "33",
+    "name": "Balotra Toll Plaza",
+    "latitude": 25.159581,
+    "longitude": 70.374773,
+    "roadName": "NH-36",
+    "tollFee": 60,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "34",
+    "name": "Pali Road Toll Plaza",
+    "latitude": 27.720786,
+    "longitude": 76.08837,
+    "roadName": "NH-31",
+    "tollFee": 62,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "35",
+    "name": "Nagaur East Toll Plaza",
+    "latitude": 25.966861,
+    "longitude": 76.373113,
+    "roadName": "NH-60",
+    "tollFee": 56,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "36",
+    "name": "Sikar Ring Toll Plaza",
+    "latitude": 26.704415,
+    "longitude": 75.963355,
+    "roadName": "NH-48",
+    "tollFee": 50,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "37",
+    "name": "Bundi Toll Plaza",
+    "latitude": 28.634298,
+    "longitude": 76.404654,
+    "roadName": "NH-59",
+    "tollFee": 76,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "38",
+    "name": "Phalodi Toll Plaza",
+    "latitude": 26.492672,
+    "longitude": 75.206418,
+    "roadName": "NH-36",
+    "tollFee": 80,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "39",
+    "name": "Jhalawar Bypass Toll Plaza",
+    "latitude": 24.413024,
+    "longitude": 71.79387,
+    "roadName": "NH-62",
+    "tollFee": 69,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "40",
+    "name": "Dausa Toll Plaza",
+    "latitude": 28.094805,
+    "longitude": 72.696513,
+    "roadName": "NH-43",
+    "tollFee": 69,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "41",
+    "name": "Didwana Toll Plaza",
+    "latitude": 26.33719,
+    "longitude": 75.422721,
+    "roadName": "NH-17",
+    "tollFee": 100,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "42",
+    "name": "Sanchore Toll Plaza",
+    "latitude": 27.076932,
+    "longitude": 74.950838,
+    "roadName": "NH-133",
+    "tollFee": 82,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "43",
+    "name": "Anupgarh Toll Plaza",
+    "latitude": 26.055651,
+    "longitude": 71.3021,
+    "roadName": "NH-107",
+    "tollFee": 53,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "44",
+    "name": "Shahpura Toll Plaza",
+    "latitude": 28.564924,
+    "longitude": 73.190489,
+    "roadName": "NH-144",
+    "tollFee": 87,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "45",
+    "name": "Salumbar Toll Plaza",
+    "latitude": 25.568223,
+    "longitude": 71.977154,
+    "roadName": "NH-39",
+    "tollFee": 61,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "46",
+    "name": "Karauli Toll Plaza",
+    "latitude": 24.610327,
+    "longitude": 75.210527,
+    "roadName": "NH-44",
+    "tollFee": 93,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "47",
+    "name": "Dholpur Toll Plaza",
+    "latitude": 24.366926,
+    "longitude": 70.539111,
+    "roadName": "NH-93",
+    "tollFee": 65,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "48",
+    "name": "Jaipur North Toll Plaza",
+    "latitude": 24.49192,
+    "longitude": 70.187092,
+    "roadName": "NH-13",
+    "tollFee": 78,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "49",
+    "name": "Jaipur South Toll Plaza",
+    "latitude": 26.135399,
+    "longitude": 69.722843,
+    "roadName": "NH-122",
+    "tollFee": 69,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "50",
+    "name": "Jodhpur East Toll Plaza",
+    "latitude": 25.954566,
+    "longitude": 71.933891,
+    "roadName": "NH-72",
+    "tollFee": 84,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "51",
+    "name": "Jodhpur West Toll Plaza",
+    "latitude": 24.903984,
+    "longitude": 73.686413,
+    "roadName": "NH-68",
+    "tollFee": 72,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "52",
+    "name": "Kekri Toll Plaza",
+    "latitude": 25.967538,
+    "longitude": 69.545111,
+    "roadName": "NH-135",
+    "tollFee": 82,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "53",
+    "name": "Deeg Toll Plaza",
+    "latitude": 24.439114,
+    "longitude": 76.310262,
+    "roadName": "NH-94",
+    "tollFee": 51,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "54",
+    "name": "Tijara Toll Plaza",
+    "latitude": 28.594054,
+    "longitude": 74.468903,
+    "roadName": "NH-19",
+    "tollFee": 56,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "55",
+    "name": "Sawai Madhopur Toll Plaza",
+    "latitude": 24.995022,
+    "longitude": 73.623609,
+    "roadName": "NH-32",
+    "tollFee": 52,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "56",
+    "name": "Churu Bypass Toll Plaza",
+    "latitude": 27.431818,
+    "longitude": 69.976639,
+    "roadName": "NH-29",
+    "tollFee": 85,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "57",
+    "name": "Hanotia Toll Plaza",
+    "latitude": 27.229117,
+    "longitude": 72.656243,
+    "roadName": "NH-135",
+    "tollFee": 64,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "58",
+    "name": "Rawatbhata Toll Plaza",
+    "latitude": 27.099802,
+    "longitude": 72.073326,
+    "roadName": "NH-69",
+    "tollFee": 78,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "59",
+    "name": "Ramganj Mandi Toll Plaza",
+    "latitude": 25.995964,
+    "longitude": 74.68449,
+    "roadName": "NH-116",
+    "tollFee": 79,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "60",
+    "name": "Bhinmal Toll Plaza",
+    "latitude": 27.813303,
+    "longitude": 70.775485,
+    "roadName": "NH-58",
+    "tollFee": 57,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  },
+  {
+    "_id": "61",
+    "name": "Pokhran Toll Plaza",
+    "latitude": 28.162818,
+    "longitude": 73.660406,
+    "roadName": "NH-109",
+    "tollFee": 62,
+    "createdAt": "2025-04-25T08:43:12.053460Z",
+    "updatedAt": "2025-04-25T08:43:12.053460Z"
+  }
+]
