@@ -1,7 +1,5 @@
-// tailwind.config.js
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
     "./index.html",
@@ -57,7 +55,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Chart colors
         chart: {
           1: "hsl(var(--chart-1))",
           2: "hsl(var(--chart-2))",
@@ -65,7 +62,6 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
-        // Sidebar colors
         sidebar: {
           background: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -99,10 +95,9 @@ export default {
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
-    // Dark mode variants
     function({ addVariant }) {
       addVariant('dark', '.dark &');
       addVariant('light', ':root &');
     }
   ],
-} satisfies Config;
+};
