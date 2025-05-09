@@ -27,7 +27,7 @@ const Logo = ({ size = 'medium' }) => {
             TollNotify
           </h1>
           <p className={`${size === 'large' ? 'text-sm' : 'text-xs'} text-muted-foreground dark:text-white`}>
-            Toll Notification Made Easy
+            Stay Notified. Drive Hassle-Free
           </p>
         </div>
       )}
