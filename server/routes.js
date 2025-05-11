@@ -14,7 +14,6 @@ import {
 import { generateOTP, calculateDistance } from "./storage.js";
 import { setupNotificationService } from "./notificationService.js";
 import twilio from 'twilio';
-import dotenv from "dotenv";
 import { authenticateAdmin } from "../client/src/lib/auth.js";
 
 const SALT_ROUNDS = 10;
