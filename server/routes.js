@@ -1,5 +1,3 @@
-import dotenv from "dotenv";
-dotenv.config();
 import { createServer } from "http";
 import { WebSocketServer } from "ws";
 import bcrypt from "bcrypt";
@@ -15,13 +13,15 @@ import { generateOTP, calculateDistance } from "./storage.js";
 import { setupNotificationService } from "./notificationService.js";
 import twilio from 'twilio';
 import { authenticateAdmin } from "../client/src/lib/auth.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const SALT_ROUNDS = 10;
 const LOW_BALANCE_THRESHOLD = 200;
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
+const accountSid = "AC29cca58aeecbf8f22bc68eda41a3cf5c";
+const authToken = "455ef9ce94bc339474faaf835e02dcf5";
+const twilioPhone = "+19704144154";
 
 const twilioClient = twilio(accountSid, authToken);
 
