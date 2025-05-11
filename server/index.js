@@ -2,18 +2,26 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+// import cors from "cors";
 import session from "express-session";
 import MongoStore from "connect-mongo";
-import { connectToDatabase } from "../db/db.js";  // ✅ ADD THIS
+import { connectToDatabase } from "../db/db.js";
 import { registerRoutes } from "./routes.js";
 import { setupVite, serveStatic, log } from "./vite.js";
 import path from 'path';
 import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
 const app = express();
+
+// // Middleware
+// app.use(cors({
+//   origin: "https://your-frontend-url.onrender.com", // Replace with your actual frontend URL
+//   credentials: true,
+// }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -34,7 +42,6 @@ app.use(
     },
   })
 );
-
 
 // Logging middleware
 app.use((req, res, next) => {
@@ -68,9 +75,10 @@ app.use((req, res, next) => {
 // Main server logic
 (async () => {
   try {
-    await connectToDatabase();  // ✅ CONNECT MONGODB FIRST
+    await connectToDatabase();
     const server = await registerRoutes(app);
 
+    // Error handling
     app.use((err, _req, res, _next) => {
       const status = err.status || err.statusCode || 500;
       const message = err.message || "Internal Server Error";
@@ -82,11 +90,23 @@ app.use((req, res, next) => {
       await setupVite(app, server);
     } else {
       serveStatic(app);
+
+      // Serve static files from React build
+      app.use(express.static(path.join(__dirname, '../client/dist')));
+
+      // Serve index.html for non-API routes
+      app.get('*', (req, res, next) => {
+        if (!req.path.startsWith('/api')) {
+          res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+        } else {
+          next();
+        }
+      });
     }
 
-    const port = process.env.PORT;
+    const port = process.env.PORT || 5000;
     server.listen(port, '0.0.0.0', () => {
-      log(`Serving on port ${port}`);
+      log(`✅ Server is running on port ${port}`);
     });
 
   } catch (error) {
@@ -94,12 +114,3 @@ app.use((req, res, next) => {
     process.exit(1);
   }
 })();
-
-
-// Replace the existing production static serving with:
-if (app.get("env") === "production") {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-  });
-}
