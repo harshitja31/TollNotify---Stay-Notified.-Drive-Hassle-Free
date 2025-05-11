@@ -1,6 +1,16 @@
 import { apiRequest } from "./queryClient";
 
-async function safeApiRequest(method, url, body) {
+async function safeApiRequest(method, url, body, needsAuth = false) {
+  const headers = {};
+  if (needsAuth) {
+    headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
+  }
+
+  const config = {
+    method,
+    headers,
+    credentials: 'include'
+  };
   try {
     const res = await apiRequest(method, url, body);
     
@@ -149,7 +159,7 @@ async function getAdminNotifications(params = {}) {
 }
 
 async function getAdminDashboardStats() {
-  return safeApiRequest('GET', '/api/admin/dashboard/stats');
+  return safeApiRequest('GET', '/api/admin/dashboard/stats', null, true);
 }
 
 // ===== SETTINGS SECTION =====

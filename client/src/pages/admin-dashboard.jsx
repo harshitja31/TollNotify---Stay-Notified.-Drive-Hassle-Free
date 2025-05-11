@@ -48,6 +48,20 @@ const AdminDashboard = () => {
     fetchDashboardStats();
   }, []);
 
+  useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const stats = await getAdminDashboardStats();
+      setStats(stats);
+    } catch (error) {
+      if (error.message.includes('401')) {
+        handleLogout();
+      }
+    }
+  };
+  fetchData();
+}, []);
+
   // Handle tab change from URL
   useEffect(() => {
     const path = window.location.pathname.toLowerCase();

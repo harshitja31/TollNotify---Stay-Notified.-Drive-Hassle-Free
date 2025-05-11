@@ -32,14 +32,15 @@ app.use(
     store: MongoStore.create({
       mongoUrl: process.env.MONGODB_URI,
       dbName: 'toll-notification-system',
-      collectionName: 'sessions',
     }),
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: true, // REQUIRED for Render's HTTPS
-      sameSite: 'none', // Essential for cross-origin cookies
+      secure: true,
+      sameSite: 'none',
+      httpOnly: true,
+      domain: '.onrender.com', // Allow cookies for all subdomains
       maxAge: 30 * 24 * 60 * 60 * 1000,
     }
   })

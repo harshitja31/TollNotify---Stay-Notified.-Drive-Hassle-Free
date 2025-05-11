@@ -122,6 +122,19 @@ export function isAuthenticated() {
   return !!getCurrentUser();
 }
 
+export const authenticateAdmin = (req, res, next) => {
+  console.log('Session check:', {
+    isAdmin: req.session.isAdmin,
+    userId: req.session.userId
+  });
+
+  if (!req.session.isAdmin) {
+    console.warn('Unauthorized admin access attempt');
+    return res.status(401).json({ error: "Admin access required" });
+  }
+  next();
+};
+
 /**
  * Is user an Admin?
  */

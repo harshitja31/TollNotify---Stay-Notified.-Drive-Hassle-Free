@@ -298,7 +298,7 @@ app.post("/api/auth/login", async (req, res) => {
 });
 
 
-  app.post("/api/auth/admin/login", async (req, res) => {
+  app.post("/api/auth/admin/login", authenticateAdmin, async (req, res) => {
     try {
       const { email, password } = req.body;
       const admin = await Admin.findOne({ email });
@@ -311,16 +311,26 @@ app.post("/api/auth/login", async (req, res) => {
       req.session.userEmail = admin.email;
       req.session.isAdmin = true;
 
-      return res.status(200).json({
-        id: admin._id,
-        name: admin.name,
-        email: admin.email
-      });
-    } catch (error) {
+        req.session.save(err => {
+      if (err) {
+        console.error("Session save error:", err);
+        return res.status(500).json({ error: "Login failed" });
+      }
+      return res.json({ id: admin._id, name: admin.name });
+    });
+  } catch (error) {
       console.error("Error logging in admin:", error);
       return res.status(500).json({ error: "Internal server error" });
     }
   });
+
+  app.get("/api/session/debug", (req, res) => {
+  res.json({
+    sessionId: req.sessionID,
+    isAdmin: req.session.isAdmin,
+    userId: req.session.userId
+  });
+});
 
   app.get("/api/auth/logout", (req, res) => {
     req.session.destroy((err) => {
