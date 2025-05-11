@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
-// import cors from "cors";
+import cors from "cors";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import { connectToDatabase } from "../db/db.js";
@@ -16,16 +16,17 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// // Middleware
-// app.use(cors({
-//   origin: "https://your-frontend-url.onrender.com", // Replace with your actual frontend URL
-//   credentials: true,
-// }));
-
+// ================== Middleware Setup ==================
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// MongoDB session middleware
+// CORS Configuration
+app.use(cors({
+  origin: true, // Allow same-origin requests
+  credentials: true // Required for session cookies
+}));
+
+// Session Configuration
 app.use(
   session({
     store: MongoStore.create({
@@ -37,80 +38,78 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: process.env.NODE_ENV === 'production',
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-    },
+      secure: true, // REQUIRED for Render's HTTPS
+      sameSite: 'none', // Essential for cross-origin cookies
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+    }
   })
 );
 
-// Logging middleware
+// ================== Request Logging ==================
 app.use((req, res, next) => {
   const start = Date.now();
-  const path = req.path;
-  let capturedJsonResponse;
+  const requestPath = req.path;
+  let responseBody;
 
-  const originalResJson = res.json;
-  res.json = function (bodyJson, ...args) {
-    capturedJsonResponse = bodyJson;
-    return originalResJson.apply(res, [bodyJson, ...args]);
+  const originalJson = res.json;
+  res.json = function(body) {
+    responseBody = body;
+    return originalJson.call(this, body);
   };
 
-  res.on("finish", () => {
+  res.on('finish', () => {
     const duration = Date.now() - start;
-    if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+    if (requestPath.startsWith('/api')) {
+      let logMessage = `${req.method} ${requestPath} ${res.statusCode} [${duration}ms]`;
+      if (responseBody) {
+        logMessage += ` :: ${JSON.stringify(responseBody).slice(0, 100)}`;
       }
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
-      }
-      log(logLine);
+      log(logMessage);
     }
   });
 
   next();
 });
 
-// Main server logic
+// ================== Server Initialization ==================
 (async () => {
   try {
+    // Database Connection
     await connectToDatabase();
-    const server = await registerRoutes(app);
+    log('✅ MongoDB connection established');
 
-    // Error handling
-    app.use((err, _req, res, _next) => {
-      const status = err.status || err.statusCode || 500;
-      const message = err.message || "Internal Server Error";
-      res.status(status).json({ message });
-      throw err;
+    // Route Registration
+    const server = await registerRoutes(app);
+    
+    // Error Handling (Must be after routes)
+    app.use((err, req, res, next) => {
+      const status = err.status || 500;
+      const message = err.message || 'Internal Server Error';
+      res.status(status).json({ error: message });
     });
 
-    if (app.get("env") === "development") {
-      await setupVite(app, server);
-    } else {
-      serveStatic(app);
-
+    // Static File Serving (LAST MIDDLEWARE)
+    if (process.env.NODE_ENV === 'production') {
       // Serve static files from React build
       app.use(express.static(path.join(__dirname, '../client/dist')));
-
-      // Serve index.html for non-API routes
-      app.get('*', (req, res, next) => {
+      
+      // Handle SPA routing for non-API requests
+      app.get('*', (req, res) => {
         if (!req.path.startsWith('/api')) {
           res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-        } else {
-          next();
         }
       });
     }
 
+    // Server Start
     const port = process.env.PORT || 5000;
     server.listen(port, '0.0.0.0', () => {
-      log(`✅ Server is running on port ${port}`);
+      log(`🚀 Server running on port ${port}`);
+      log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
     });
 
   } catch (error) {
-    console.error("❌ Server failed to start:", error);
+    log(`❌ Critical startup failure: ${error.message}`);
     process.exit(1);
   }
 })();
