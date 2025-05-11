@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import { createServer } from "http";
 import { WebSocketServer } from "ws";
 import bcrypt from "bcrypt";
@@ -13,7 +15,7 @@ import { generateOTP, calculateDistance } from "./storage.js";
 import { setupNotificationService } from "./notificationService.js";
 import twilio from 'twilio';
 import dotenv from "dotenv";
-dotenv.config();
+import { authenticateAdmin } from "../client/src/lib/auth.js";
 
 const SALT_ROUNDS = 10;
 const LOW_BALANCE_THRESHOLD = 200;
