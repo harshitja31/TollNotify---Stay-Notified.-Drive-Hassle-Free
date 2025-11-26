@@ -1,4 +1,4 @@
-import { apiRequest } from "./queryClient";
+import { apiRequest } from "./queryClient.js";
 
 const USER_KEY = 'toll_notify_user';
 
