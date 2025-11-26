@@ -1,4 +1,4 @@
-import { apiRequest } from "./queryClient";
+import { apiRequest } from "./queryClient.js";
 
 async function safeApiRequest(method, url, body, needsAuth = false) {
   const headers = {};
